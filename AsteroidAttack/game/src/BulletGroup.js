@@ -7,17 +7,17 @@ export default class BulletGroup extends Phaser.Physics.Arcade.Group {
 
         this.createMultiple ({ // creates multiple instances
             classType: Bullet, // of bullet class
-            frameQuantity: 300, // creates 300 bullets and stores them for later use 
+            frameQuantity: 30, // creates 300 bullets and stores them for later use 
             active: false,
             visible: false,
-            key: 'Bullet' // refrences bullet image 
+            key: 'bulletIMG' // references bullet image 
         })
     }
 
-    fire(x, y) {
+    fire(scene, x, y) {
         const Bullet = this.getFirstDead(false); // gets first unused bullet
         if (Bullet) { // if true
-            Bullet.fire(x, y);  
+            Bullet.fire(x, y, scene);  
         }
     }
 }

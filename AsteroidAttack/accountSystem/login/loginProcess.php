@@ -19,7 +19,7 @@
     $pw = $_POST['pword'];
     // Checks to see if any fields are empty 
     if ($un == "" or $pw == "" ){
-      $_SESSION['error'] = "emptyfields";
+      $_SESSION['error'] = "emptyFields";
       header('Location: loginpage.php'); // Redirects to login page
     } 
     $sql = "SELECT * FROM users WHERE username = '$un'";
@@ -27,12 +27,12 @@
 
     // Checks to see if any fields are empty 
     if ($un == "" or $pw == ""){
-      $_SESSION['error'] = "emptyfields";
+      $_SESSION['error'] = "emptyFields";
       header('Location: loginpage.php'); // Redirects to login page
     } 
     // Checks to see if any fields contains spaces 
     elseif (preg_match('/\s/',$un) or preg_match('/\s/',$pw)){
-        $_SESSION['error'] = "spaceexists";
+        $_SESSION['error'] = "spaceExists";
         header('Location: loginpage.php'); // Redirects to login page
     }
     // Checks to see if there are any rows that match 

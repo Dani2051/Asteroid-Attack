@@ -26,23 +26,23 @@
 
     // Checks to see if any fields are empty 
     if ($un == "" or $pw == "" or $confirmPw == ""){
-        $_SESSION['error'] = "emptyfields";
+        $_SESSION['error'] = "emptyFields";
     } 
     // Checks to see if any fields contains spaces 
     elseif (preg_match('/\s/',$un) or preg_match('/\s/',$pw)){
-        $_SESSION['error'] = "spaceexists";
+        $_SESSION['error'] = "spaceExists";
     }
     // Checks to see if password and username are between 6 to 50 chars long
     elseif (strlen($un) > 50 or strlen($un) < 6 or strlen($pw) > 50 or strlen($pw) < 6){
-        $_SESSION['error'] = "incorrectlength";
+        $_SESSION['error'] = "incorrectLength";
     }
     // Checks to see if any users exist with username entered
     elseif (mysqli_num_rows($result) >= 1) {
-        $_SESSION['error'] = "userexists";
+        $_SESSION['error'] = "userExists";
     }
     // Checks to see if password and confirm password are the same
     elseif ($pw !== $confirmPw) {
-        $_SESSION['error'] = "notmatching";    
+        $_SESSION['error'] = "notMatching";    
     }
     
     // Checks to see if there was any error

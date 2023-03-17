@@ -5,13 +5,13 @@
                 "authProtocol": "default"
             },
             "previewLimit": 50,
-            "server": "51.155.212.220",
+            "server": "2-12.co.uk",
             "port": 3306,
             "driver": "MariaDB",
+            "name": "Server",
             "database": "AsteroidAttack",
             "username": "ddar",
-            "password": "tjwa1234",
-            "name": "Server"
+            "password": "tjwa1234"
         }
     ]
 }

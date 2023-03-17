@@ -24,19 +24,19 @@ session_start();
 
 // Runs if error has been found
 if (isset($_SESSION['error'])){
-    if ($_SESSION['error'] == "emptyfields"){
+    if ($_SESSION['error'] == "emptyFields"){
         echo "<p>Please fill all fields</p>";
     }
-    elseif ($_SESSION['error'] == "notmatching"){
+    elseif ($_SESSION['error'] == "notMatching"){
         echo "<p>Passwords do not match. Please try again</p>";
     }
-    elseif ($_SESSION['error'] == "incorrectlength"){
+    elseif ($_SESSION['error'] == "incorrectLength"){
         echo "<p>Username and password must be between 6 and 50 characters. Please try again</p>";
     }
-    elseif ($_SESSION['error'] == "userexists"){
+    elseif ($_SESSION['error'] == "userExists"){
         echo "<p>That username has already been taken. Please try another</p>";
     }
-    elseif ($_SESSION['error'] == "spaceexists"){ 
+    elseif ($_SESSION['error'] == "spaceExists"){ 
         echo "<p>Username and password must not contain spaces. Please try again</p>";
     }
     

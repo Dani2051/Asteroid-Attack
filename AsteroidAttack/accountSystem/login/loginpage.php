@@ -29,10 +29,10 @@ if (isset($_SESSION['error'])){
     elseif ($_SESSION['error'] == 'invalidDetails'){
         echo "<p>Password incorrect. Please try again</p>";
     }
-    elseif ($_SESSION['error'] == "emptyfields"){
+    elseif ($_SESSION['error'] == "emptyFields"){
         echo "<p>Please fill all fields</p>";
     }
-    elseif ($_SESSION['error'] == "spaceexists"){ 
+    elseif ($_SESSION['error'] == "spaceExists"){ 
         echo "<p>Username and password must not contain spaces. Please try again</p>";
     }
     
