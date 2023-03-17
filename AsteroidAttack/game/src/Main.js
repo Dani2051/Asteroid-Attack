@@ -9,13 +9,13 @@ export default class Main extends Phaser.Scene {
 
     preload() {
         this.load.image('spaceshipIMG', 'assets/spaceship.png')
-        this.load.image('sulletIMG', 'assets/bullet.png') 
-        this.load.image('sackgroundIMG', 'assets/background.png')  
+        this.load.image('bulletIMG', 'assets/bullet.png') 
+        this.load.image('backgroundIMG', 'assets/background.png')  
         this.load.image('starsIMG', 'assets/bg-stars.png')  
         this.load.audio('explodeAUDIO', 'assets/explosion.wav')
         this.load.audio('bulletAUDIO', 'assets/test3.wav')
         this.load.audio('bgAUDIO', 'assets/bgMusic.wav')        
-        this.load.atlas('ssteroidIMG', 'assets/asteroid.png', 'assets/asteroid_atlas.json')   
+        this.load.atlas('asteroidIMG', 'assets/asteroid.png', 'assets/asteroid_atlas.json')   
 
     }
 
